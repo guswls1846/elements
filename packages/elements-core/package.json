@@ -11,7 +11,7 @@
   "author": "Stoplight <support@stoplight.io>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/stoplightio/elements"
+    "url": "https://github.com/guswls1846/elements"
   },
   "license": "Apache-2.0",
   "type": "commonjs",
@@ -117,10 +117,11 @@
     "style-loader": "^3.3.3"
   },
   "publishConfig": {
-    "directory": "dist"
+    "directory": "dist",
+    "registry": "https://npm.pkg.github.com"
   },
   "release": {
     "extends": "@stoplight/scripts/release"
   },
-  "gitHead": "dae8e7dcadd9714c2b7a308b76c58aea2a9bfd15"
+  "gitHead": "782fcb818da654f4687f10c4a4764aa7540eed65"
 }

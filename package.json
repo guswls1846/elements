@@ -1,12 +1,11 @@
 {
   "name": "root",
-  "private": true,
   "homepage": "https://github.com/stoplightio/elements",
   "bugs": "https://github.com/stoplightio/elements/issues",
   "author": "Stoplight <support@stoplight.io>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/guswls1846/elements.git"
+    "url": "https://github.com/guswls1846/elements"
   },
   "license": "Apache-2.0",
   "workspaces": [
@@ -124,5 +123,7 @@
     ]
   },
   "dependencies": {},
-  "version": "1.0.2"
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }
