@@ -6,7 +6,7 @@
   "author": "Stoplight <support@stoplight.io>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/stoplightio/elements"
+    "url": "https://github.com/guswls1846/elements.git"
   },
   "license": "Apache-2.0",
   "workspaces": [
@@ -124,5 +124,5 @@
     ]
   },
   "dependencies": {},
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
