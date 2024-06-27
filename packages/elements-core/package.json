@@ -1,6 +1,6 @@
 {
-  "name": "@stoplight/elements-core",
-  "version": "8.3.4",
+  "name": "@guswls1846/elements-core",
+  "version": "8.3.6",
   "sideEffects": [
     "web-components.min.js",
     "src/web-components/**",
@@ -123,5 +123,5 @@
   "release": {
     "extends": "@stoplight/scripts/release"
   },
-  "gitHead": "782fcb818da654f4687f10c4a4764aa7540eed65"
+  "gitHead": "dafb88a0a7b547ded26bd8195111da91b2d0656e"
 }
