@@ -1,6 +1,6 @@
 {
   "name": "@guswls1846/elements-core",
-  "version": "8.3.8",
+  "version": "8.3.9",
   "private": false,
   "sideEffects": [
     "web-components.min.js",
