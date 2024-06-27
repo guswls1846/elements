@@ -1,3 +1,5 @@
+import { To } from 'react-router-dom';
+
 export type TableOfContentsProps = {
   tree: TableOfContentsItem[];
   activeId: string;
@@ -9,7 +11,7 @@ export type TableOfContentsProps = {
 };
 
 export type CustomLinkComponent = React.ComponentType<{
-  to: string;
+  to: To;
   className?: string;
   children: React.ReactNode;
 }>;

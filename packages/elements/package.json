@@ -1,8 +1,9 @@
 {
-  "name": "@stoplight/elements",
-  "version": "8.3.4",
+  "name": "@guswls1846/elements",
+  "version": "8.3.7",
   "description": "UI components for composing beautiful developer documentation.",
   "keywords": [],
+  "private": false,
   "sideEffects": [
     "web-components.min.js",
     "src/web-components/**",
@@ -63,7 +64,7 @@
     ]
   },
   "dependencies": {
-    "@stoplight/elements-core": "~8.3.3",
+    "@guswls1846/elements-core": "~8.3.3",
     "@stoplight/http-spec": "^7.1.0",
     "@stoplight/json": "^3.18.1",
     "@stoplight/mosaic": "^1.53.1",
@@ -73,7 +74,7 @@
     "file-saver": "^2.0.5",
     "lodash": "^4.17.21",
     "react-query": "^3.34.19",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "6.24.0"
   },
   "devDependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
@@ -110,5 +111,5 @@
   "release": {
     "extends": "@stoplight/scripts/release"
   },
-  "gitHead": "782fcb818da654f4687f10c4a4764aa7540eed65"
+  "gitHead": "dafb88a0a7b547ded26bd8195111da91b2d0656e"
 }

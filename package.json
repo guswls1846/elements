@@ -1,5 +1,6 @@
 {
   "name": "root",
+  "private": true,
   "homepage": "https://github.com/stoplightio/elements",
   "bugs": "https://github.com/stoplightio/elements/issues",
   "author": "Stoplight <support@stoplight.io>",
@@ -65,7 +66,7 @@
     "webpack-dev-server": "4.15.1"
   },
   "scripts": {
-    "demo": "yarn workspace @stoplight/elements-demo",
+    "demo": "yarn workspace @guswls1846/elements-demo",
     "elements": "yarn workspace @stoplight/elements",
     "elements-core": "yarn workspace @stoplight/elements-core",
     "elements-dev-portal": "yarn workspace @stoplight/elements-dev-portal",
