@@ -1,7 +1,7 @@
 {
   "name": "@guswls1846/elements-dev-portal",
-  "private": true,
-  "version": "2.3.6",
+  "private": false,
+  "version": "2.3.7",
   "description": "UI components for composing beautiful developer documentation.",
   "keywords": [],
   "sideEffects": [
