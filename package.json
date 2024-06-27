@@ -123,5 +123,6 @@
       "@commitlint/config-conventional"
     ]
   },
-  "dependencies": {}
+  "dependencies": {},
+  "version": "1.0.0"
 }
