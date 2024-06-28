@@ -1,6 +1,6 @@
-import '@stoplight/elements/styles.min.css';
+import '@guswls1846/elements/styles.min.css';
 
-import { StoplightProject } from '@stoplight/elements-dev-portal';
+import { StoplightProject } from '@guswls1846/elements-dev-portal';
 import React from 'react';
 
 export const StoplightProjectDocs: React.FC = () => {

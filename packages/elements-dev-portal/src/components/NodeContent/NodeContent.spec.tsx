@@ -1,4 +1,4 @@
-import { CustomLinkComponent } from '@stoplight/elements-core';
+import { CustomLinkComponent } from '@guswls1846/elements-core';
 import { render, screen } from '@testing-library/react';
 import * as React from 'react';
 import { MemoryRouter } from 'react-router-dom';

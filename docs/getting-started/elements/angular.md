@@ -7,12 +7,13 @@ Learn how to get started with Elements in an Angular project.
 First, install the Elements library.
 
 ```bash
-yarn add @stoplight/elements
+yarn add @guswls1846/elements
 ```
 
 Add the Elements CSS and JavaScript bundles to your Angular config.
 
 <!-- title: angular.json -->
+
 ```jsx
 {
   "projects": {
@@ -25,11 +26,11 @@ Add the Elements CSS and JavaScript bundles to your Angular config.
             // ...
             "styles": [
               // ...
-              "node_modules/@stoplight/elements/styles.min.css"
+              "node_modules/@guswls1846/elements/styles.min.css"
             ],
             "scripts": [
               // ...
-              "node_modules/@stoplight/elements/web-components.min.js"
+              "node_modules/@guswls1846/elements/web-components.min.js"
             ]
           }
         }
@@ -45,11 +46,13 @@ Now, generate a new Angular component for your API reference docs.
 yarn ng generate component api-reference
 ```
 
-This should generate an `api-reference` folder with a few files. In the `api-reference.component.html` file, add the Stoplight API component.
+This should generate an `api-reference` folder with a few files. In the `api-reference.component.html` file, add the
+Stoplight API component.
 
 <!--
 title: api-reference.component.html
 -->
+
 ```html
 <elements-api
   apiDescriptionUrl="https://raw.githubusercontent.com/stoplightio/Public-APIs/master/reference/zoom/openapi.yaml"
@@ -57,13 +60,15 @@ title: api-reference.component.html
 ></elements-api>
 ```
 
-Notice `basePath` in the API component. Add a route for the `/api-reference` path in the `app-routing.module.ts` file. It's important to add a catch-all route `**` so you can deep link to paths in the API reference docs.
+Notice `basePath` in the API component. Add a route for the `/api-reference` path in the `app-routing.module.ts` file.
+It's important to add a catch-all route `**` so you can deep link to paths in the API reference docs.
 
 Your routing file should end up looking like this:
 
 <!--
 title: app-routing.module.ts
 -->
+
 ```ts
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -86,13 +91,16 @@ const routes: Routes = [
 export class AppRoutingModule {}
 ```
 
-Finally, set up Angular to allow [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components). Head over to the `app-module.ts` file and add the [CUSTOM_ELEMENTS_SCHEMA](https://angular.io/api/core/CUSTOM_ELEMENTS_SCHEMA).
+Finally, set up Angular to allow [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components). Head
+over to the `app-module.ts` file and add the
+[CUSTOM_ELEMENTS_SCHEMA](https://angular.io/api/core/CUSTOM_ELEMENTS_SCHEMA).
 
 It'll end up looking like this:
 
 <!--
 title: app-module.ts
 -->
+
 ```ts
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';

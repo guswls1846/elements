@@ -13,8 +13,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
-      '@stoplight/elements': absoluteElementsPath,
-      '@stoplight/elements-core': absoluteElementsCorePath,
+      '@guswls1846/elements': absoluteElementsPath,
+      '@guswls1846/elements-core': absoluteElementsCorePath,
     },
     fallback: {
       stream: false,

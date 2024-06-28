@@ -1,26 +1,25 @@
 import * as React from 'react';
 import { Provider as MosaicProvider, subscribeTheme } from '@stoplight/mosaic';
 
-import { PersistenceContextProvider, Styled } from '@stoplight/elements-core';
+import { PersistenceContextProvider, Styled } from '@guswls1846/elements-core';
 import { DevPortalProvider } from '../src/components/DevPortalProvider';
 
 export * from '../../../.storybook/preview';
 
 import '../src/styles.css';
 
-
 const ThemeProvider = (Story, context) => {
   const theme = context.globals.theme;
   React.useEffect(() => {
     subscribeTheme({ mode: theme === 'dark' ? 'dark' : 'light' });
   }, [subscribeTheme, theme]);
-  return (
-    <Story {...context} />
-  );
+  return <Story {...context} />;
 };
 
-const PersistenceBoundaryDecorator = (Story) => (
-  <PersistenceContextProvider><Story /></PersistenceContextProvider>
+const PersistenceBoundaryDecorator = Story => (
+  <PersistenceContextProvider>
+    <Story />
+  </PersistenceContextProvider>
 );
 
 const MosaicProviderDecorator = Story => (
@@ -43,4 +42,10 @@ const StyledDecorator = Story => (
   </Styled>
 );
 
-export const decorators = [ThemeProvider, MosaicProviderDecorator, PersistenceBoundaryDecorator, DevPortalProviderDecorator, StyledDecorator];
+export const decorators = [
+  ThemeProvider,
+  MosaicProviderDecorator,
+  PersistenceBoundaryDecorator,
+  DevPortalProviderDecorator,
+  StyledDecorator,
+];

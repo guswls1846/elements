@@ -1,4 +1,4 @@
-const ROOT_CACHE_KEY = '@stoplight/elements-dev-portal/client-query';
+const ROOT_CACHE_KEY = '@guswls1846/elements-dev-portal/client-query';
 
 export const devPortalCacheKeys = {
   all: [ROOT_CACHE_KEY] as const,

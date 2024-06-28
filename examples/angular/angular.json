@@ -19,18 +19,15 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.css",
-              "node_modules/@stoplight/elements/styles.min.css",
-              "node_modules/@stoplight/elements-dev-portal/styles.min.css"
+              "node_modules/@guswls1846/elements/styles.min.css",
+              "node_modules/@guswls1846/elements-dev-portal/styles.min.css"
             ],
             "scripts": [
-              "node_modules/@stoplight/elements/web-components.min.js",
-              "node_modules/@stoplight/elements-dev-portal/web-components.min.js"
+              "node_modules/@guswls1846/elements/web-components.min.js",
+              "node_modules/@guswls1846/elements-dev-portal/web-components.min.js"
             ]
           },
           "configurations": {
@@ -77,13 +74,11 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.component.html"
-            ]
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.component.html"]
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "angular"
 }

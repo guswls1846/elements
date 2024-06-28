@@ -1,5 +1,5 @@
 {
-  "name": "@stoplight/elements-starter-react",
+  "name": "@guswls1846/elements-starter-react",
   "version": "1.0.0",
   "description": "Basic React app with embedded Stoplight Elements",
   "author": "Stoplight <support@stoplight.io>",
@@ -10,8 +10,8 @@
     "serve": "serve -s -l 4200 build"
   },
   "dependencies": {
-    "@stoplight/elements": "^7.0.0",
-    "@stoplight/elements-dev-portal": "^1.0.0",
+    "@guswls1846/elements": "^7.0.0",
+    "@guswls1846/elements-dev-portal": "^1.0.0",
     "react": "^17.0.2"
   },
   "devDependencies": {

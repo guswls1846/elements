@@ -1,4 +1,4 @@
-import { API } from '@stoplight/elements';
+import { API } from '@guswls1846/elements';
 import React from 'react';
 
 import Layout from '../components/layout';

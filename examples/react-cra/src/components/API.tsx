@@ -1,6 +1,6 @@
-import '@stoplight/elements/styles.min.css';
+import '@guswls1846/elements/styles.min.css';
 
-import { API } from '@stoplight/elements';
+import { API } from '@guswls1846/elements';
 import React from 'react';
 
 export const StoplightAPI: React.FC = () => {

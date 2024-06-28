@@ -10,8 +10,8 @@ import {
   withQueryClientProvider,
   withRouter,
   withStyles,
-} from '@stoplight/elements-core';
-import { ExtensionAddonRenderer } from '@stoplight/elements-core/components/Docs';
+} from '@guswls1846/elements-core';
+import { ExtensionAddonRenderer } from '@guswls1846/elements-core/components/Docs';
 import { Box, Flex, Icon } from '@stoplight/mosaic';
 import { flow } from 'lodash';
 import * as React from 'react';

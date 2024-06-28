@@ -1,18 +1,14 @@
 {
   "extends": "./tsconfig.json",
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "**/__*__/**"
-  ],
+  "include": ["src"],
+  "exclude": ["**/__*__/**"],
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "dist",
     "moduleResolution": "node",
     "paths": {
-      "@stoplight/elements-core": ["../elements-core/dist"],
-      "@stoplight/elements-core/*": ["../elements-core/dist/*"]
+      "@guswls1846/elements-core": ["../elements-core/dist"],
+      "@guswls1846/elements-coree/*": ["../elements-core/dist/*"]
     }
   }
 }

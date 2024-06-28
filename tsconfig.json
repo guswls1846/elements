@@ -6,12 +6,12 @@
     "baseUrl": "./packages",
     "lib": ["es2021", "dom"],
     "paths": {
-      "@stoplight/elements": ["./elements/src"],
-      "@stoplight/elements-core": ["./elements-core/src"],
-      "@stoplight/elements-core/*": ["./elements-core/src/*"],
-      "@stoplight/elements-dev-portal": ["./elements-dev-portal/src"],
-      "@stoplight/elements-dev-portal/*": ["./elements-dev-portal/src/*"],
-      "@stoplight/elements/*": ["./elements/src/*"]
+      "@guswls1846/elements": ["./elements/src"],
+      "@guswls1846/elements-core": ["./elements-core/src"],
+      "@guswls1846/elements-core/*": ["./elements-core/src/*"],
+      "@guswls1846/elements-dev-portal": ["./elements-dev-portal/src"],
+      "@guswls1846/elements-dev-portal/*": ["./elements-dev-portal/src/*"],
+      "@guswls1846/elements/*": ["./elements/src/*"]
     }
   }
 }

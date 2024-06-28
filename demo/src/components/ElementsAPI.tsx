@@ -1,6 +1,6 @@
-import '@stoplight/elements-core/styles.css';
+import '@guswls1846/elements-core/styles.css';
 
-import { API } from '@stoplight/elements';
+import { API } from '@guswls1846/elements';
 import { Box } from '@stoplight/mosaic';
 import React, { useContext } from 'react';
 

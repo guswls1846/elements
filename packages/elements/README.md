@@ -1,9 +1,10 @@
 [![docs](https://img.shields.io/badge/API%20Docs-site-green.svg?style=flat-square)](https://meta.stoplight.io/docs/elements)
-[![license](https://img.shields.io/npm/l/@stoplight/elements?style=flat-square)](./LICENSE)
+[![license](https://img.shields.io/npm/l/@guswls1846/elements?style=flat-square)](./LICENSE)
 
-# @stoplight/elements
+# @guswls1846/elements
 
 Elements is a collection of UI components for displaying beautiful developer documentation from any OpenAPI document.
+
 ## Documentation
 
 Visit our **[Documentation](https://meta.stoplight.io/docs/elements)** for getting starting, guides and demos.

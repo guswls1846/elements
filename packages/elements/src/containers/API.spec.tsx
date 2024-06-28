@@ -5,13 +5,13 @@ import {
   withPersistenceBoundary,
   withQueryClientProvider,
   withStyles,
-} from '@stoplight/elements-core';
+} from '@guswls1846/elements-core';
 import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { createMemoryHistory } from 'history';
 import { flow } from 'lodash';
 import * as React from 'react';
-import { Route, Router } from 'react-router';
+import { Route } from 'react-router';
 
 import { InstagramAPI } from '../__fixtures__/api-descriptions/Instagram';
 import { simpleApiWithoutDescription } from '../__fixtures__/api-descriptions/simpleApiWithoutDescription';
@@ -71,11 +71,9 @@ describe('API', () => {
     history.push('/paths/internal-operation/get');
 
     const { unmount } = render(
-      <Router history={history}>
-        <Route path="/">
-          <APIWithoutRouter layout="sidebar" apiDescriptionDocument={APIDocument} />
-        </Route>
-      </Router>,
+      <Route path="/">
+        <APIWithoutRouter layout="sidebar" apiDescriptionDocument={APIDocument} />
+      </Route>,
     );
 
     expect(screen.getByText('If you see this, something went wrong')).toBeInTheDocument();
@@ -88,11 +86,9 @@ describe('API', () => {
     history.push('/schemas/InternalObject');
 
     render(
-      <Router history={history}>
-        <Route path="/">
-          <APIWithoutRouter layout="sidebar" apiDescriptionDocument={APIDocument} />
-        </Route>
-      </Router>,
+      <Route path="/">
+        <APIWithoutRouter layout="sidebar" apiDescriptionDocument={APIDocument} />
+      </Route>,
     );
 
     expect(screen.getByText('Cool object, but internal.')).toBeInTheDocument();
@@ -103,11 +99,9 @@ describe('API', () => {
     history.push('/paths/internal-operation/get');
 
     render(
-      <Router history={history}>
-        <Route path="/">
-          <APIWithoutRouter layout="sidebar" apiDescriptionDocument={APIDocument} hideInternal />
-        </Route>
-      </Router>,
+      <Route path="/">
+        <APIWithoutRouter layout="sidebar" apiDescriptionDocument={APIDocument} hideInternal />
+      </Route>,
     );
 
     expect(screen.queryByText('If you see this, something went wrong')).not.toBeInTheDocument();
@@ -119,11 +113,9 @@ describe('API', () => {
     history.push('/schemas/InternalObject');
 
     render(
-      <Router history={history}>
-        <Route path="/">
-          <APIWithoutRouter layout="sidebar" apiDescriptionDocument={APIDocument} hideInternal />
-        </Route>
-      </Router>,
+      <Route path="/">
+        <APIWithoutRouter layout="sidebar" apiDescriptionDocument={APIDocument} hideInternal />
+      </Route>,
     );
 
     expect(screen.queryByText('Cool object, but internal.')).not.toBeInTheDocument();

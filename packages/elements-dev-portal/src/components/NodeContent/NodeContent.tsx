@@ -6,7 +6,7 @@ import {
   MarkdownComponentsProvider,
   MockingProvider,
   ReferenceResolver,
-} from '@stoplight/elements-core';
+} from '@guswls1846/elements-core';
 import { CustomComponentMapping } from '@stoplight/markdown-viewer';
 import { dirname, resolve } from '@stoplight/path';
 import { NodeType } from '@stoplight/types';

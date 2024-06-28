@@ -1,9 +1,10 @@
 [![docs](https://img.shields.io/badge/API%20Docs-site-green.svg?style=flat-square)](https://meta.stoplight.io/docs/elements)
-[![license](https://img.shields.io/npm/l/@stoplight/elements?style=flat-square)](./LICENSE)
+[![license](https://img.shields.io/npm/l/@guswls1846/elements?style=flat-square)](./LICENSE)
 
-# @stoplight/elements-dev-portal
+# @guswls1846/elements-dev-portal
 
-Elements Dev Portal is an extension to Elements, giving API teams the tools they need to make a beautiful developer portal from any OpenAPI or Markdown content, in a [Stoplight][stoplight] Project.
+Elements Dev Portal is an extension to Elements, giving API teams the tools they need to make a beautiful developer
+portal from any OpenAPI or Markdown content, in a [Stoplight][stoplight] Project.
 
 ## Documentation
 

@@ -5,8 +5,8 @@ import {
   HttpMethodColors,
   ParsedDocs,
   TryItWithRequestSamples,
-} from '@stoplight/elements-core';
-import { ExtensionAddonRenderer } from '@stoplight/elements-core/components/Docs';
+} from '@guswls1846/elements-core';
+import { ExtensionAddonRenderer } from '@guswls1846/elements-core/components/Docs';
 import { Box, Flex, Heading, Icon, Tab, TabList, TabPanel, TabPanels, Tabs } from '@stoplight/mosaic';
 import { NodeType } from '@stoplight/types';
 import cn from 'classnames';

@@ -1,4 +1,4 @@
-import { createElementClass } from '@stoplight/elements-core';
+import { createElementClass } from '@guswls1846/elements-core';
 
 import { StoplightProject } from '../containers/StoplightProject';
 

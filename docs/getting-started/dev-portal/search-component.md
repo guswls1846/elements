@@ -1,20 +1,22 @@
 # Elements Dev Portal Search
 
-Once you've [installed](https://github.com/stoplightio/elements) the `elements-dev-portal` package, use the `Search` component to offer an autocomplete search.
+Once you've [installed](https://github.com/stoplightio/elements) the `elements-dev-portal` package, use the `Search`
+component to offer an autocomplete search.
 
 ## Usage in React
 
-If you'd like to use this for React (and React-based tools like Gatsby) then use the `Search` React component. Here is an example of one way to implement it:
+If you'd like to use this for React (and React-based tools like Gatsby) then use the `Search` React component. Here is
+an example of one way to implement it:
 
 <!-- title: Search.tsx -->
 
 ```jsx
-import type { NodeSearchResult } from '@stoplight/elements-dev-portal';
-import { Search as ElementsSearch, useGetNodes, useGetWorkspace } from '@stoplight/elements-dev-portal';
+import type { NodeSearchResult } from '@guswls1846/elements-dev-portal';
+import { Search as ElementsSearch, useGetNodes, useGetWorkspace } from '@guswls1846/elements-dev-portal';
 import * as React from 'react';
 
 export type SearchProps = {
-  projectIds: string[];
+  projectIds: string[],
 };
 
 export const Search = ({ projectIds }: SearchProps) => {
@@ -53,9 +55,11 @@ export const Search = ({ projectIds }: SearchProps) => {
 };
 ```
 
-Here's an example of what that would look like in a website's navigation bar. All you'll need to include is any collection of `projectIds` that the search should traverse.
+Here's an example of what that would look like in a website's navigation bar. All you'll need to include is any
+collection of `projectIds` that the search should traverse.
 
 <!-- title: Navigation.tsx -->
+
 ```jsx
 import React from 'react';
 import { NavLink } from 'react-router-dom';
@@ -72,5 +76,3 @@ export const Navigation = () => {
   );
 };
 ```
- 
-

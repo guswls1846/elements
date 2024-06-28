@@ -4,11 +4,10 @@ import {
   RouterTypeContext,
   RoutingProps,
   SidebarLayout,
-  useRouter,
   withStyles,
-} from '@stoplight/elements-core';
+} from '@guswls1846/elements-core';
 import * as React from 'react';
-import { Link, Redirect, Route, Switch, useHistory, useParams } from 'react-router-dom';
+import { Link, Navigate, Route, Routes, useNavigate, useParams } from 'react-router-dom';
 
 import { BranchSelector } from '../components/BranchSelector';
 import { DevPortalProvider } from '../components/DevPortalProvider';
@@ -84,7 +83,7 @@ const StoplightProjectImpl: React.FC<StoplightProjectProps> = ({
 }) => {
   const { branchSlug: encodedBranchSlug = '', nodeSlug = '' } = useParams<{ branchSlug?: string; nodeSlug: string }>();
   const branchSlug = decodeURIComponent(encodedBranchSlug);
-  const history = useHistory();
+  const history = useNavigate();
 
   const { data: tableOfContents, isFetched: isTocFetched } = useGetTableOfContents({ projectId, branchSlug });
   const { data: branches } = useGetBranches({ projectId });
@@ -104,7 +103,7 @@ const StoplightProjectImpl: React.FC<StoplightProjectProps> = ({
   if (!nodeSlug && isTocFetched && tableOfContents?.items) {
     const firstNode = findFirstNode(tableOfContents.items);
     if (firstNode) {
-      return <Redirect to={branchSlug ? `/branches/${branchSlug}/${firstNode.slug}` : `/${firstNode.slug}`} />;
+      return <Navigate to={branchSlug ? `/branches/${branchSlug}/${firstNode.slug}` : `/${firstNode.slug}`} />;
     }
   }
 
@@ -127,12 +126,12 @@ const StoplightProjectImpl: React.FC<StoplightProjectProps> = ({
     elem = <NotFound />;
   } else if (node?.slug && nodeSlug !== node.slug) {
     // Handle redirect to node's slug
-    return <Redirect to={branchSlug ? `/branches/${branchSlug}/${node.slug}` : `/${node.slug}`} />;
+    return <Navigate to={branchSlug ? `/branches/${branchSlug}/${node.slug}` : `/${node.slug}`} />;
   } else {
     elem = (
       <NodeContent
         node={node}
-        Link={ReactRouterMarkdownLink}
+        Link={ReactRouterMarkdownLink as any}
         hideTryIt={hideTryIt}
         hideMocking={hideMocking}
         hideExport={hideExport}
@@ -159,7 +158,7 @@ const StoplightProjectImpl: React.FC<StoplightProjectProps> = ({
               branches={branches.items}
               onChange={branch => {
                 const encodedBranchSlug = encodeURIComponent(branch.slug);
-                history.push(branch.is_default ? `/${nodeSlug}` : `/branches/${encodedBranchSlug}/${nodeSlug}`);
+                history(branch.is_default ? `/${nodeSlug}` : `/branches/${encodedBranchSlug}/${nodeSlug}`);
               }}
             />
           ) : null}
@@ -187,26 +186,16 @@ const StoplightProjectRouter = ({
   router = 'history',
   ...props
 }: StoplightProjectProps) => {
-  const { Router, routerProps } = useRouter(router, basePath, staticRouterPath);
+  // const { Router, routerProps } = useRouter(router, basePath, staticRouterPath);
 
   return (
     <DevPortalProvider platformUrl={platformUrl}>
       <RouterTypeContext.Provider value={router}>
-        <Router {...routerProps} key={basePath}>
-          <Switch>
-            <Route path="/branches/:branchSlug/:nodeSlug+" exact>
-              <StoplightProjectImpl {...props} />
-            </Route>
-
-            <Route path="/:nodeSlug+" exact>
-              <StoplightProjectImpl {...props} />
-            </Route>
-
-            <Route path="/" exact>
-              <StoplightProjectImpl {...props} />
-            </Route>
-          </Switch>
-        </Router>
+        <Routes>
+          <Route path="/branches/:branchSlug/:nodeSlug+" element={<StoplightProjectImpl {...props} />} />
+          <Route path="/:nodeSlug+" element={<StoplightProjectImpl {...props} />} />
+          <Route path="/" element={<StoplightProjectImpl {...props} />} />
+        </Routes>
       </RouterTypeContext.Provider>
     </DevPortalProvider>
   );

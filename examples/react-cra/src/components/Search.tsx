@@ -1,5 +1,5 @@
-import type { NodeSearchResult } from '@stoplight/elements-dev-portal';
-import { Search as ElementsSearch, useGetNodes, useGetWorkspace } from '@stoplight/elements-dev-portal';
+import type { NodeSearchResult } from '@guswls1846/elements-dev-portal';
+import { Search as ElementsSearch, useGetNodes, useGetWorkspace } from '@guswls1846/elements-dev-portal';
 import * as React from 'react';
 
 export type SearchProps = {

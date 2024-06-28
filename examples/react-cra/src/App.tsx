@@ -1,4 +1,4 @@
-import { DevPortalProvider } from '@stoplight/elements-dev-portal';
+import { DevPortalProvider } from '@guswls1846/elements-dev-portal';
 import React, { Component } from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 

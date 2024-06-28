@@ -59,7 +59,7 @@ describe('Stoplight Project', () => {
   it('loads correctly using static router', async () => {
     render(
       <StoplightProject
-        router="static"
+        router="history"
         projectId="cHJqOjYwNjYx"
         basePath=""
         staticRouterPath="/b3A6Mzg5NDM2-create-todo"
